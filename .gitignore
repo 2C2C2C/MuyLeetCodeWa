@@ -1,5 +1,9 @@
+# Common
+.vs
+
 # Prerequisites
 *.d
+
 
 # Compiled Object files
 *.slo
