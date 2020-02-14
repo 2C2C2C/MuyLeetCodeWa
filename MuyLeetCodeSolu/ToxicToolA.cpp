@@ -77,3 +77,25 @@ void ToxicToolA<T>::ShowLinkList(const ListNode & head)
 		tempPtr = tempPtr->next;
 	}
 }
+
+template<class T>
+void ToxicToolA<T>::bubbleSortInt(std::vector<int> arr)
+{
+	int i = 0, j = 0, len = arr.size();
+	if (len < 1) return;
+	for (i = 0; i < len - 1; i++)
+		for (j = 0; j < len - i - 1; j++) // the back has been set, so use n-i-1 as the limit
+			if (arr[j] > arr[j + 1])
+				std::swap(arr[j], arr[j + 1]);
+}
+
+template<class T>
+void ToxicToolA<T>::bubbleSortInt(const T arr[], const int len)
+{
+	int i = 0, j = 0;
+	if (len < 1) return;
+	for (i = 0; i < len - 1; i++)
+		for (j = 0; j < len - i - 1; j++) // the back has been set, so use n-i-1 as the limit
+			if (arr[j] > arr[j + 1])
+				std::swap(arr[j], arr[j + 1]);
+}

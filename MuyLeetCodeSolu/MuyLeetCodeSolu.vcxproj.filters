@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ToxicTool">
+      <UniqueIdentifier>{df1e450a-c0fe-4a9e-b311-5c091bf609d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Easy">
+      <UniqueIdentifier>{f99e1a9e-fe42-48d4-a20b-49aa9d81f2e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MuyLeetCodeSolu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ToxicToolA.cpp">
+      <Filter>ToxicTool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ToxicToolA.h">
+      <Filter>ToxicTool</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem283.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem326.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem371.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem387.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem412.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem344.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem268.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem242.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem237.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem234.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem217.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem206.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem202.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem191.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem190.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem189.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem172.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem171.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem169.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem160.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem141.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem136.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem125.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem155.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem122.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem121.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem118.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem108.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,12 +1,17 @@
 #pragma once
 
+/*
+412. Fizz Buzz
+https://leetcode.com/problems/fizz-buzz/
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>
 
 class Problem412
 {
-	std::vector<std::string> fizzBuzz(int n)
+	static std::vector<std::string> fizzBuzz(int n)
 	{
 		std::vector<std::string>* result = new std::vector<std::string>();
 		std::string strFizz = "Fizz";

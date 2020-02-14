@@ -24,5 +24,7 @@ public:
 	static const ListNode& GetLinkListFromArray(const int arr[], const int arrLength);
 	static const ListNode& GetLinkListFromArray(const std::vector<int>& tempVector);
 	static void ShowLinkList(const ListNode& head);
+	static void bubbleSortInt(std::vector<int> arr);
+	static void bubbleSortInt(const T arr[], const int arrLength);
 };
 
