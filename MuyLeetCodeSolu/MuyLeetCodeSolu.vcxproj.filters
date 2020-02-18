@@ -116,5 +116,8 @@
     <ClInclude Include="Easy\Problem108.h">
       <Filter>Easy</Filter>
     </ClInclude>
+    <ClInclude Include="Easy\Problem204.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

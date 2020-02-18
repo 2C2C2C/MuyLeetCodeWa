@@ -171,6 +171,7 @@
     <ClInclude Include="Easy\Problem190.h" />
     <ClInclude Include="Easy\Problem191.h" />
     <ClInclude Include="Easy\Problem202.h" />
+    <ClInclude Include="Easy\Problem204.h" />
     <ClInclude Include="Easy\Problem206.h" />
     <ClInclude Include="Easy\Problem217.h" />
     <ClInclude Include="Easy\Problem234.h" />

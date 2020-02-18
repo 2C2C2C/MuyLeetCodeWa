@@ -10,32 +10,8 @@
 #include <vector>
 #include <unordered_set>
 
-
-//////// temp
-
-int countPrimes(int n)
-{
-	int result = 2;
-	switch (n)
-	{
-	case 0:
-	case 1:
-		return 0;
-		break;
-	case 2:
-		return 1;
-		break;
-	default:
-		break;
-	}
-
-	for (unsigned int i = 3; i < n; i = i + 2)
-	{
-		//if(i%3!=0)
-	}
-}
-
-
+// test
+#include "Easy/Problem204.h"
 
 //////// temp
 
@@ -44,6 +20,11 @@ int main()
 {
 	std::cout << "Hello World!\n";
 
+
+	int result = 0;
+	result = Problem204::countPrimes(9);
+
+	std::cout << result << std::endl;
 	std::cout << "End\n";
 	return 0;
 }
