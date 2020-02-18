@@ -19,6 +19,9 @@
     <Filter Include="Easy">
       <UniqueIdentifier>{f99e1a9e-fe42-48d4-a20b-49aa9d81f2e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Medium">
+      <UniqueIdentifier>{0782f1a5-7a68-4f8e-aa64-efd156827311}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MuyLeetCodeSolu.cpp">
@@ -118,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="Easy\Problem204.h">
       <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem5.h">
+      <Filter>Medium</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

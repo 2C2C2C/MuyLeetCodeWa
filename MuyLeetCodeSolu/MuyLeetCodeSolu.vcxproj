@@ -184,6 +184,7 @@
     <ClInclude Include="Easy\Problem371.h" />
     <ClInclude Include="Easy\Problem387.h" />
     <ClInclude Include="Easy\Problem412.h" />
+    <ClInclude Include="Medium\Problem5.h" />
     <ClInclude Include="ToxicToolA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
