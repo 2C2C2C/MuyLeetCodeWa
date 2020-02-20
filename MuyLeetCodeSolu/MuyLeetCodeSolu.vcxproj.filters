@@ -131,5 +131,17 @@
     <ClInclude Include="Medium\Problem17.h">
       <Filter>Medium</Filter>
     </ClInclude>
+    <ClInclude Include="Medium\Problem19.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem22.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem29.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem34.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -186,6 +186,10 @@
     <ClInclude Include="Easy\Problem412.h" />
     <ClInclude Include="Medium\Problem11.h" />
     <ClInclude Include="Medium\Problem17.h" />
+    <ClInclude Include="Medium\Problem19.h" />
+    <ClInclude Include="Medium\Problem22.h" />
+    <ClInclude Include="Medium\Problem29.h" />
+    <ClInclude Include="Medium\Problem34.h" />
     <ClInclude Include="Medium\Problem5.h" />
     <ClInclude Include="ToxicToolA.h" />
   </ItemGroup>
