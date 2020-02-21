@@ -11,7 +11,7 @@
 
 #include "Medium/Problem5.h"
 #include "Medium/Problem22.h"
-#include "Medium/Problem34.h"
+#include "Medium/Problem48.h"
 
 //////// temp
 
@@ -37,11 +37,19 @@ int main()
 	//std::string resultWa1 = Problem22::GetAStr(3, true);
 	//std::string resultWa2 = Problem22::GetAStr(3, false);
 
-	int arrwa[] = { 1,2,3,3,3,3,4,5,9};
-	std::vector<int> ques = ToxicToolA<int>::IntArrToVector(arrwa, 9);
+	int arrwa[] = { 1,2,3 };
+	std::vector<int> temp;
+	temp.push_back(1);
+	temp.push_back(2);
+	temp.push_back(3);
+	temp.push_back(4);
 
-	std::vector<int> resWa;
-	resWa = Problem34::searchRange(ques, 3);
+	std::vector<std::vector<int>> resWa;
+	resWa.push_back(temp);
+	resWa.push_back(temp);
+	resWa.push_back(temp);
+	resWa.push_back(temp);
+	Problem48::rotate(resWa);
 
 	std::cout << "End\n";
 	return 0;
