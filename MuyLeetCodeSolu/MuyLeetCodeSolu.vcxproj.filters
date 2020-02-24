@@ -22,6 +22,9 @@
     <Filter Include="Medium">
       <UniqueIdentifier>{0782f1a5-7a68-4f8e-aa64-efd156827311}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hard">
+      <UniqueIdentifier>{3347a6c6-5247-4325-b348-ca4aee9b53b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MuyLeetCodeSolu.cpp">
@@ -144,6 +147,75 @@
       <Filter>Medium</Filter>
     </ClInclude>
     <ClInclude Include="Medium\Problem48.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem3.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem2.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Hard\Problem4.h">
+      <Filter>Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem1.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem7.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem8.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem9.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem13.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem14.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem20.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem21.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem26.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem27.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem28.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem35.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem53.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem66.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem69.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem70.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem88.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem101.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem104.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem622.h">
       <Filter>Medium</Filter>
     </ClInclude>
   </ItemGroup>

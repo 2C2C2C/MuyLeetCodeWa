@@ -10,7 +10,6 @@ https://leetcode.com/problems/longest-palindromic-substring/
 class Problem5
 {
 public:
-
 	static std::string longestPalindrome(std::string inputStr)
 	{
 		if (2 > inputStr.length())

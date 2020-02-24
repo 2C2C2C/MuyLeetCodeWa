@@ -7,7 +7,7 @@ https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
 
 #include <vector>
 
-class Solution
+class Problem4
 {
 public:
 	double findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2)
