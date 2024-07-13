@@ -203,6 +203,7 @@
     <ClInclude Include="Easy\Problem7.h" />
     <ClInclude Include="Easy\Problem70.h" />
     <ClInclude Include="Easy\Problem8.h" />
+    <ClInclude Include="Easy\Problem83.h" />
     <ClInclude Include="Easy\Problem88.h" />
     <ClInclude Include="Easy\Problem9.h" />
     <ClInclude Include="Hard\Problem4.h" />
@@ -217,6 +218,7 @@
     <ClInclude Include="Medium\Problem48.h" />
     <ClInclude Include="Medium\Problem5.h" />
     <ClInclude Include="Medium\Problem622.h" />
+    <ClInclude Include="Medium\Problem82.h" />
     <ClInclude Include="ToxicToolA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

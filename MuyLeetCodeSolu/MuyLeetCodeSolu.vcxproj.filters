@@ -224,5 +224,11 @@
     <ClInclude Include="Easy\Problem67.h">
       <Filter>Easy</Filter>
     </ClInclude>
+    <ClInclude Include="Easy\Problem83.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem82.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

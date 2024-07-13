@@ -4,7 +4,7 @@
 #include <vector>
 #include <vector>
 
-// they like to just use int, so.....
+// normally they use int :D
 struct ListNode
 {
 public:
@@ -12,7 +12,6 @@ public:
 	ListNode* next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
-
 
 // this methods are used for debug while doing l337code
 template<class T>
