@@ -5,6 +5,14 @@
 https://leetcode.com/problems/longest-palindromic-substring/
 */
 
+/*
+* Check edge cases(string length 0, 1, 2 cases).
+* Iterate input string for 2 types (abba & abxba)
+* Need 2 pointers, left and right. Left start from input left, right is consider as the right side of palindromic string.
+* Try palindromic string length from 1 to greater value, check from side to center.
+* e.g abba type; left(index 1), try length (3), right(index 6)
+*/
+
 #include <iostream>
 
 class Problem5

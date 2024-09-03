@@ -5,6 +5,12 @@
 https://leetcode.com/problems/two-sum/
 */
 
+/*
+Run through the array.
+Select 1 element in the array and check the sum with other elements.
+If it doesnt hit, select next element and do it again.
+*/
+
 #include <vector>
 
 class Problem1

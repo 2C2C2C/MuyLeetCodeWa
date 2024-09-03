@@ -5,6 +5,13 @@
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 */
 
+/*
+* Use a hashset for storing char from current checking longest string.
+* (Go through the string)Check char from the string, if the set does not contains current char, add it.
+* If current char is a duplicated char, current longest string stop at prev index. Check if the current is longer than prev longest string.
+* Start from the next index of prev duplicated char, do it again.
+*/
+
 #include <unordered_map>
 
 class Problem3
@@ -16,20 +23,20 @@ public:
 			return 0;
 
 		std::unordered_map<char, int> charAndPos; // check fast
-		int currentSubStrLength = 0, lastSubStrLength = 0, strStartIndex = 0;;
+		size_t currentSubStrLength = 0, lastSubStrLength = 0, strStartIndex = 0;;
 
-		for (int i = 0; strStartIndex + currentSubStrLength < _str.length() && i < _str.length(); i++)
+		for (size_t i = 0; strStartIndex + currentSubStrLength < _str.length() && i < _str.length(); i++)
 		{
 			// check next chara repeat or not
-			if (charAndPos.empty() || charAndPos.find(_str[i]) == charAndPos.end())
+			char currentChar = _str[i];
+			if (charAndPos.empty() || charAndPos.find(currentChar) == charAndPos.end())
 			{
-				charAndPos.insert(std::pair<char, int>(_str[i], i));
+				charAndPos.insert(std::pair<char, int>(currentChar, i));
 				currentSubStrLength++;
 			}
-			else
+			else // find repeat char, reset i(check pos) to the repeat char's previous pos
 			{
-				// find repeat char, reset i(check pos) to the repeat char's previous pos
-				i = charAndPos[_str[i]];
+				i = charAndPos[currentChar];
 				charAndPos.clear();
 				if (currentSubStrLength > lastSubStrLength)
 					lastSubStrLength = currentSubStrLength;
