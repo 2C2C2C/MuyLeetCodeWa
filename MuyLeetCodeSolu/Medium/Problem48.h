@@ -5,6 +5,11 @@
 https://leetcode.com/problems/rotate-image/
 */
 
+/*
+* Diagonal(up left to right down) flip the matrix.
+* Revis every horizontal line.
+*/
+
 #include <iostream>
 #include <vector>
 

@@ -10,7 +10,7 @@ https://leetcode.com/problems/reverse-linked-list/
 struct ListNode
 {
 	int val;
-	ListNode *next;
+	ListNode* next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
 
@@ -22,22 +22,22 @@ public:
 	{
 		if (nullptr == head || nullptr == head->next) return head;
 
-		ListNode* tempA = nullptr;
-		ListNode* tempB = nullptr;
-		ListNode* tempC = nullptr;
-
-		tempB = head;
-
-		// tempA(next) <- tempB(current) -< tempC(prev)
+		ListNode* left = nullptr;
+		ListNode* center = head;
+		ListNode* right = nullptr;
+		/* steps:
+		* left (n-1) -> center (n) -> right (n+1)
+		* left (n-1) <- center (n) -> right (n+1)
+		* prev left (n-1) <- left (n) -> center (n+1) -> right (n+2)
+		*/
 		do
 		{
-			tempC = tempB->next;
-			tempB->next = tempA;
-			tempA = tempB;
-			tempB = tempC;
-		} while (nullptr != tempB->next);
-		tempB->next = tempA;
-
-		return tempB;
+			right = center->next;
+			center->next = left;
+			left = center;
+			center = right;
+		} while (nullptr != center->next);
+		center->next = left;
+		return center;
 	}
 };

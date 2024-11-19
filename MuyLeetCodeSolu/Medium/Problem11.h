@@ -13,7 +13,7 @@ class Problem11
 public:
 	static int maxArea(std::vector<int>& height)
 	{
-		int result = 0, tempRes = 0;
+		int result = 0, tempResult = 0;
 		int left = 0, right = height.size() - 1;
 
 		while (true)
@@ -22,9 +22,9 @@ public:
 				break;
 			else
 			{
-				tempRes = (right - left) * fmin(height[left], height[right]);
-				if (tempRes > result)
-					result = tempRes;
+				tempResult = (right - left) * fmin(height[left], height[right]);
+				if (tempResult > result)
+					result = tempResult;
 				
 				// TODO : understand why move like this
 				if (height[left] >= height[right])
