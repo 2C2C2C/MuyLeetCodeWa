@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <vector>
-#include <vector>
 
 // normally they use int :D
 struct ListNode
