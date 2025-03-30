@@ -233,7 +233,13 @@
     <ClInclude Include="Medium\Problem80.h">
       <Filter>Medium</Filter>
     </ClInclude>
-    <ClInclude Include="Medium\Problem33.h">
+    <ClInclude Include="Medium\Problem33 Search in Rotated Sorted Array.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem36 Valid Sudoku.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem200 Number of Islands.h">
       <Filter>Medium</Filter>
     </ClInclude>
   </ItemGroup>
