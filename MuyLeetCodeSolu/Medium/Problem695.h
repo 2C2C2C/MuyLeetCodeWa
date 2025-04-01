@@ -14,7 +14,7 @@ https://leetcode.com/problems/max-area-of-island/description/
 #include <vector>
 #include <queue>
 
-struct NodeIndex
+struct GridIndex
 {
 	size_t rowIndex;
 	size_t columnIndex;
@@ -36,13 +36,11 @@ public:
 				{
 					continue;
 				}
-				std::queue<NodeIndex> toVisit;
-				NodeIndex node;
+				GridIndex node;
 				node.rowIndex = i;
 				node.columnIndex = j;
-				toVisit.push(node);
 
-				int tempArea = checkAndMarkIsland(grid, toVisit);
+				int tempArea = checkAndMarkIsland(grid, node);
 				if (tempArea > result)
 				{
 					result = tempArea;
@@ -54,19 +52,17 @@ public:
 
 private:
 
-	int checkAndMarkIsland(std::vector<std::vector<int>>& grid, std::queue<NodeIndex>& toVisit)
+	int checkAndMarkIsland(std::vector<std::vector<int>>& grid, GridIndex startGrid)
 	{
 		int result = 0;
-		if (toVisit.empty())
-		{
-			return result;
-		}
+		std::queue<GridIndex> toVisit;
+		toVisit.push(startGrid);
 
 		size_t rowCount = grid.size();
 		size_t columnCount = grid[0].size();
 		do
 		{
-			NodeIndex node = toVisit.front();
+			GridIndex node = toVisit.front();
 			toVisit.pop();
 			size_t rowIndex = node.rowIndex;
 			size_t columnIndex = node.columnIndex;
@@ -82,28 +78,28 @@ private:
 			// visit 4 dir grids
 			if (0 < columnIndex) // vist left
 			{
-				NodeIndex left;
+				GridIndex left;
 				left.rowIndex = rowIndex;
 				left.columnIndex = columnIndex - 1;
 				toVisit.push(left);
 			}
 			if (columnCount - 1 > columnIndex) // vist right
 			{
-				NodeIndex right;
+				GridIndex right;
 				right.rowIndex = rowIndex;
 				right.columnIndex = columnIndex + 1;
 				toVisit.push(right);
 			}
 			if (0 < rowIndex) // visit up
 			{
-				NodeIndex up;
+				GridIndex up;
 				up.rowIndex = rowIndex - 1;
 				up.columnIndex = columnIndex;
 				toVisit.push(up);
 			}
 			if (rowCount - 1 > rowIndex) // visit down
 			{
-				NodeIndex down;
+				GridIndex down;
 				down.rowIndex = rowIndex + 1;
 				down.columnIndex = columnIndex;
 				toVisit.push(down);

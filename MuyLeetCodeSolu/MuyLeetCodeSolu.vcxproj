@@ -223,6 +223,7 @@
     <ClInclude Include="Medium\Problem36 Valid Sudoku.h" />
     <ClInclude Include="Medium\Problem48.h" />
     <ClInclude Include="Medium\Problem5.h" />
+    <ClInclude Include="Medium\Problem542.h" />
     <ClInclude Include="Medium\Problem622.h" />
     <ClInclude Include="Medium\Problem695.h" />
     <ClInclude Include="Medium\Problem80.h" />

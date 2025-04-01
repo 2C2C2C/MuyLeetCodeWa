@@ -251,5 +251,8 @@
     <ClInclude Include="Medium\Problem695.h">
       <Filter>Medium</Filter>
     </ClInclude>
+    <ClInclude Include="Medium\Problem542.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
