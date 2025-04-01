@@ -228,6 +228,7 @@
     <ClInclude Include="Medium\Problem695.h" />
     <ClInclude Include="Medium\Problem80.h" />
     <ClInclude Include="Medium\Problem82.h" />
+    <ClInclude Include="Medium\Problem994.h" />
     <ClInclude Include="ToxicToolA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

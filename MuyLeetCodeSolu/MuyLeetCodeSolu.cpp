@@ -17,7 +17,7 @@
 //#include "Medium/Problem33 Search in Rotated Sorted Array.h"
 //#include "Medium/Problem36 Valid Sudoku.h"
 //#include "Medium/Problem200 Number of Islands.h"
-#include "Medium/Problem542.h"
+#include "Medium/Problem994.h"
 //////// temp
 
 
@@ -28,6 +28,25 @@ int main()
 	//string result = Problem67::addBinary("11", "1");
 	//string result = Problem67::addBinary("1010", "1011");
 
+	std::vector<std::vector<int>> grids;
+	std::vector<int> temp1;
+	temp1.push_back(2);
+	temp1.push_back(1);
+	temp1.push_back(1);
+	std::vector<int> temp2;
+	temp2.push_back(0);
+	temp2.push_back(1);
+	temp2.push_back(1);
+	std::vector<int> temp3;
+	temp3.push_back(1);
+	temp3.push_back(0);
+	temp3.push_back(1);
+	grids.push_back(temp1);
+	grids.push_back(temp2);
+	grids.push_back(temp3);
+
+	Problem994 p;
+	p.orangesRotting(grids);
 
 	//std::cout << "End\n";
 	std::cout << "End\n";
