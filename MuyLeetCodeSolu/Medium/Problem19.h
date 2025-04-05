@@ -5,12 +5,21 @@
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 */
 
+
+/*
+* Create a fake head, fake head's next node is input head.
+* Use fast(to the end node) slow(to the node before to be removed) pointer(interval is n nodes) to Travese linked list.
+* Delete the target node(the slow->next node).
+* Return head.
+* Be Careful with edge cases(to delete head; Linked list length is 1...etc);
+*/
+
 #include <iostream>
 
 struct ListNode
 {
 	int val;
-	ListNode *next;
+	ListNode* next;
 	ListNode(int x) : val(x), next(NULL) {}
 
 };
@@ -18,7 +27,7 @@ struct ListNode
 class Problem19
 {
 public:
-	static ListNode* removeNthFromEnd(ListNode* head, int n)
+	ListNode* removeNthFromEnd(ListNode* head, int n)
 	{
 		if (nullptr == head->next)
 		{
@@ -28,59 +37,43 @@ public:
 			return head;
 		}
 
-		ListNode* tempNodeA = nullptr;
-		ListNode* tempNodeB = nullptr;
+		ListNode* moveToEnd = nullptr; // use it to move to the end
+		ListNode* nodeBeforeTarget = nullptr; // the node before the node to be removed
 		ListNode* fakeHead = new ListNode(-1); // a fake head
 		fakeHead->next = head;
 
 		int tempStep = n;
-		tempNodeB = tempNodeA = fakeHead;
+		nodeBeforeTarget = moveToEnd = fakeHead;
 
-		// find node (tempNodeB->next)
-		while (nullptr != tempNodeA->next)
+		// using slow fast pointer to traverse linked list, fast pointer to the end and slow pointer to the node will be removed
+		while (nullptr != moveToEnd->next) // move to last node 
 		{
 			if (0 != tempStep)
 			{
-				tempNodeA = tempNodeA->next;
+				moveToEnd = moveToEnd->next;
 				tempStep--;
 			}
 			else
 			{
-				tempNodeA = tempNodeA->next;
-				tempNodeB = tempNodeB->next;
+				moveToEnd = moveToEnd->next;
+				nodeBeforeTarget = nodeBeforeTarget->next;
 			}
 		}
 
 		// remove node
-		tempNodeA = tempNodeB->next;
-		if (nullptr == tempNodeA->next)
+		ListNode* toRemove = nullptr;
+		if (nodeBeforeTarget == fakeHead)
 		{
-			tempNodeB->next = nullptr;
-			delete tempNodeA;
-		}
-		else if (tempNodeA == head)
-		{
-			if (nullptr != head->next)
-			{
-				head = head->next;
-				tempNodeA->next = nullptr;
-				delete tempNodeA;
-			}
-			else
-			{
-				head = nullptr;
-				delete head;
-			}
-		}
-		else
-		{
-			tempNodeB->next = tempNodeA->next;
-			tempNodeA->next = nullptr;
-			delete tempNodeA;
+			toRemove = head;
+			head = head->next;
+			delete toRemove;
+			toRemove = nullptr;
+			return head;
 		}
 
-		fakeHead->next = nullptr;
-		delete fakeHead;
+		toRemove = nodeBeforeTarget->next;
+		nodeBeforeTarget->next = nodeBeforeTarget->next->next;
+		delete toRemove;
 		return head;
 	}
 };
