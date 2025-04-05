@@ -6,7 +6,7 @@ https://leetcode.com/problems/number-of-islands/description/
 */
 
 /* Do DFS search.
-* Traversal all grids. When find a valid grid(value is '1'), start a DFS search from this grid.
+* Traverse all grids. When find a valid grid(value is '1'), start a DFS search from this grid.
 * While in the search
 */
 

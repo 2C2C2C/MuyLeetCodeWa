@@ -6,7 +6,7 @@ https://leetcode.com/problems/rotting-oranges/description/
 */
 
 /*
-* Traversal all grid first, collect all rotten oranges into a queue and check if there is any fresh orange in grids.
+* Traverse all grid first, collect all rotten oranges into a queue and check if there is any fresh orange in grids.
 * If no fresh, return 0 (already done).
 * Has fresh, if no rotten orange return -1 (impossible).
 * Let prev collected rotten oranges do expand around, fresh orange around will be rotten.

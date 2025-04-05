@@ -6,7 +6,7 @@ https://leetcode.com/problems/clone-graph/description/
 */
 
 /*
-* Traversal the given graph(use DFS) and create the clone.
+* Traverse the given graph(use DFS) and create the clone.
 * Use a dictionary to store the visited nodes(as keys), and the nodes we clones (as values).
 * When we traversaling to a visited node, get the clone from dictionaray and connect it.
 */
@@ -47,13 +47,13 @@ public:
 		}
 
 		std::unordered_map<Node*, Node*> nodeCache;
-		Node* result = TraversalClone(node, nodeCache);
+		Node* result = TraverseClone(node, nodeCache);
 		return result;
 	}
 
 private:
 
-	Node* TraversalClone(Node* source, std::unordered_map<Node*, Node*>& nodeCache)
+	Node* TraverseClone(Node* source, std::unordered_map<Node*, Node*>& nodeCache)
 	{
 		Node* clone = new Node(source->val);
 		nodeCache[source] = clone;
@@ -63,7 +63,7 @@ private:
 			Node& temp = *sourceNeighbors[i];
 			if (nodeCache.find(&temp) == nodeCache.end()) // this node has not been visited
 			{
-				Node& clonedNeighbor = *TraversalClone(&temp, nodeCache);
+				Node& clonedNeighbor = *TraverseClone(&temp, nodeCache);
 				clone->neighbors.push_back(&clonedNeighbor);
 			}
 			else // node is already visited, get it from cache

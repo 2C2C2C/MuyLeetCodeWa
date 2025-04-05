@@ -6,7 +6,7 @@ https://leetcode.cn/problems/01-matrix/description/
 */
 
 /*
-* Traversal all grids. Collect all grids dat value == 0.
+* Traverse all grids. Collect all grids dat value == 0.
 * When a grid value is not 0 (distance is not 0), start an expand search around current grid.
 * Calculate result and fill in result grid.
 */
