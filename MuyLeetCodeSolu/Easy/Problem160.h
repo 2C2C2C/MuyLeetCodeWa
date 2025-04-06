@@ -5,73 +5,106 @@
 https://leetcode.com/problems/intersection-of-two-linked-lists/
 */
 
+
+/*
+* Go through 2 list, calculate gap count and find the longer list.
+* Start 2nd go through from heads, longer list move gaps first.
+* Then move 2 list at same speed, do check(if equal) every steps.
+*/
 #include <iostream>
 
 struct ListNode
 {
 	int val;
-	ListNode *next;
+	ListNode* next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
 
 class Problem160
 {
 public:
-	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
+	ListNode* getIntersectionNode(ListNode* headA, ListNode* headB)
 	{
-		int lenA = 0, lenB = 0, gap = 0;
-
-		ListNode* longList = nullptr;
-		ListNode* shortList = nullptr;
-		ListNode* result = nullptr;
-
-		longList = headA;
-		while (nullptr != longList)
+		// some edge cases
+		if (nullptr == headA || nullptr == headB)
 		{
-			lenA++;
-			longList = longList->next;
+			return nullptr;
+		}
+		else if (headA == headB)
+		{
+			return headA;
 		}
 
-		longList = headB;
-		while (nullptr != longList)
+		size_t gap = 0;
+		ListNode* tempA = headA;
+		ListNode* tempB = headB;
+		bool aIsLonger = false, bIsLonger = false;
+		do
 		{
-			lenB++;
+			if (aIsLonger || bIsLonger)
+			{
+				++gap;
+				if (aIsLonger)
+				{
+					tempA = tempA->next;
+					if (nullptr == tempA)
+					{
+						break;
+					}
+				}
+				else if (bIsLonger)
+				{
+					tempB = tempB->next;
+					if (nullptr == tempB)
+					{
+						break;
+					}
+				}
+				continue;
+			}
+
+			// has not find longer list yet
+			if (nullptr != tempA)
+			{
+				tempA = tempA->next;
+			}
+
+			if (nullptr != tempB)
+			{
+				tempB = tempB->next;
+			}
+
+			// check if we find the longer list
+			aIsLonger = nullptr == tempB;
+			bIsLonger = nullptr == tempA;
+			if (aIsLonger && bIsLonger) // edge case, both reach the end
+			{
+				break;
+			}
+		} while (true);
+
+		ListNode* longList = aIsLonger ? headA : headB;
+		ListNode* shortList = aIsLonger ? headB : headA;
+
+		while (0 < gap--)
+		{
 			longList = longList->next;
 		}
-
-		// find and make balance
-		if (0 == headA || 0 == headB)
-			return result;
-		else
+		if (longList == shortList)
 		{
-			gap = lenA - lenB;
-			if (gap >= 0)
-			{
-				longList = headA;
-				shortList = headB;
-			}
-			else
-			{
-				longList = headB;
-				shortList = headA;
-				gap = -gap;
-			}
-			while (gap-- > 0)
-				longList = longList->next;
+			return shortList;
 		}
 
 		// find interest node
-		while (nullptr != longList)
+		while (nullptr != longList->next)
 		{
-			if (longList == shortList)
-			{
-				result = longList;
-				break;
-			}
 			longList = longList->next;
 			shortList = shortList->next;
+			if (longList == shortList)
+			{
+				return shortList;
+			}
 		}
-
-		return result;
+		return nullptr;
 	}
 };

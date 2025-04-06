@@ -5,20 +5,25 @@
 https://leetcode.com/problems/linked-list-cycle/
 */
 
-#include <iostrseam>
+/*
+* Use fast slow pointer.
+* Fast pointer move 2 node, slow pointer move 1 node.
+* If fast pointer move to end, no cycle.
+* If fast pointer move the same position as slow poiner, has cycle.
+* 
+*/
 
 struct ListNode
 {
 	int val;
 	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
+	ListNode(int x) : val(x), next(nullptr) {}
 };
 
 class Problem141
 {
 public:
-
-	static bool hasCycle(ListNode* head)
+	bool hasCycle(ListNode* head)
 	{
 		bool result = false;
 		if (nullptr == head) return result;

@@ -33,6 +33,9 @@
     <ClCompile Include="ToxicToolA.cpp">
       <Filter>ToxicTool</Filter>
     </ClCompile>
+    <ClCompile Include="Hard\Problem23.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ToxicToolA.h">
@@ -262,6 +265,15 @@
     </ClInclude>
     <ClInclude Include="Medium\Problem86.h">
       <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Hard\Problem23.h">
+      <Filter>Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem142.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Easy\Problem876.h">
+      <Filter>Easy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

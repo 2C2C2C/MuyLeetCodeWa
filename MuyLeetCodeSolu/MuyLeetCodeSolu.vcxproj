@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Hard\Problem23.cpp" />
     <ClCompile Include="MuyLeetCodeSolu.cpp" />
     <ClCompile Include="ToxicToolA.cpp" />
   </ItemGroup>
@@ -206,11 +207,14 @@
     <ClInclude Include="Easy\Problem70.h" />
     <ClInclude Include="Easy\Problem8.h" />
     <ClInclude Include="Easy\Problem83.h" />
+    <ClInclude Include="Easy\Problem876.h" />
     <ClInclude Include="Easy\Problem88.h" />
     <ClInclude Include="Easy\Problem9.h" />
+    <ClInclude Include="Hard\Problem23.h" />
     <ClInclude Include="Hard\Problem4.h" />
     <ClInclude Include="Medium\Problem11.h" />
     <ClInclude Include="Medium\Problem133.h" />
+    <ClInclude Include="Medium\Problem142.h" />
     <ClInclude Include="Medium\Problem17.h" />
     <ClInclude Include="Medium\Problem19.h" />
     <ClInclude Include="Medium\Problem2.h" />
