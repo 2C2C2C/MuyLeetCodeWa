@@ -12,14 +12,14 @@
 //#include "Medium/Problem.h"
 //#include "Hard/Problem.h"
 
-#include "Hard/Problem76.h"
+#include "Medium/Problem438.h"
 
 int main()
 {
 	std::cout << "Hello World!\n";
 
-	Problem76 p;
-	p.minWindow("ADOBECODEBANC","ABC");
+	Problem438 p;
+	p.findAnagrams("cbaebabacd","abc");
 
 	//std::cout << "End\n";
 	std::cout << "End\n";

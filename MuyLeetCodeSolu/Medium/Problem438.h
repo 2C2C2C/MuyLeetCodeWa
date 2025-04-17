@@ -1,36 +1,37 @@
 #pragma once
 
 /*
-567. Permutation in String
-https://leetcode.com/problems/permutation-in-string/
+438. Find All Anagrams in a String
+https://leetcode.com/problems/find-all-anagrams-in-a-string/
 */
 
 /*
 * Use fixed size slide window to stores temp sub string.
 * Use bucket to store char usage for check string and temp sub string.
 * Keep moving window to right and use 2 bucked to compare char usage.
-* Find one answer then return.
+* Find answe, push into result.
 */
 
 #include <string>
 #include <vector>
 
-class Problem567
+class Problem438 
 {
 public:
-	bool checkInclusion(std::string s1, std::string s2)
-	{
-		std::string check = s1;
-		std::string input = s2;
+    std::vector<int> findAnagrams(std::string s, std::string p)
+    {
+        std::string input = s;
+        std::string check = p;
+        std::vector<int> result;
 
-		size_t checkLength = check.length();
-		size_t inputLength = input.length();
-		// edge case
+        size_t checkLength = check.length();
+        size_t inputLength = input.length();
 
-		if (checkLength > inputLength)
-		{
-			return false;
-		}
+        // edge case
+        if (checkLength > inputLength)
+        {
+            return result;
+        }
 
 		int charCapA = 'A';
 		size_t left = 0, right = 0;
@@ -84,8 +85,11 @@ public:
 			{
 				if (isInputMeetRequirement(windowbucket, checkBucket))
 				{
-					return true;
+					result.push_back((int)left);
 				}
+
+				// slide window move right
+
 				left++; // shrink window, since we already get a answer we need to find a better one
 				if (1 <= left) // Tweak window bucket
 				{
@@ -104,8 +108,8 @@ public:
 			}
 		} while (right < inputLength);
 
-		return false;
-	}
+        return result;
+    }
 
 private:
 	bool isInputMeetRequirement(std::vector<size_t>& input, std::vector<size_t>& check)

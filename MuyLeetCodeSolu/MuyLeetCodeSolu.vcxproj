@@ -226,6 +226,7 @@
     <ClInclude Include="Medium\Problem33.h" />
     <ClInclude Include="Medium\Problem34.h" />
     <ClInclude Include="Medium\Problem36.h" />
+    <ClInclude Include="Medium\Problem438.h" />
     <ClInclude Include="Medium\Problem48.h" />
     <ClInclude Include="Medium\Problem5.h" />
     <ClInclude Include="Medium\Problem542.h" />

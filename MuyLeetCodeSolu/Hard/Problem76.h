@@ -12,7 +12,7 @@ https://leetcode.com/problems/minimum-window-substring/
 */
 
 #include <string>
-#include <Vector>
+#include <vector>
 
 class Problem76
 {
