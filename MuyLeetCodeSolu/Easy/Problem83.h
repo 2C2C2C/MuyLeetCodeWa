@@ -43,33 +43,4 @@ public:
 		return head;
 	}
 
-	static void printToString(ListNode* head)
-	{
-		if (nullptr == head)
-		{
-			std::cout << "NodeList: empty" << std::endl;
-			return;
-		}
-		else if (nullptr == head->next)
-		{
-			std::cout << "NodeList: " << head->val << std::endl;
-			return;
-		}
-
-		std::vector<int> tempList = std::vector<int>();
-		ListNode* node = head;
-		do
-		{
-			tempList.push_back(node->val);
-			node = node->next;
-		} while (nullptr != node);
-
-		std::string output = "";
-		for (unsigned i = 0, length = tempList.size(); i < length; i++)
-		{
-			output += (std::to_string(tempList[i]) + " ");
-		}
-		std::cout << "NodeList: " << output << std::endl;
-	}
-
 };

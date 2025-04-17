@@ -5,12 +5,12 @@
 https://leetcode.com/problems/intersection-of-two-linked-lists/
 */
 
-
 /*
 * Go through 2 list, calculate gap count and find the longer list.
 * Start 2nd go through from heads, longer list move gaps first.
 * Then move 2 list at same speed, do check(if equal) every steps.
 */
+
 #include <iostream>
 
 struct ListNode

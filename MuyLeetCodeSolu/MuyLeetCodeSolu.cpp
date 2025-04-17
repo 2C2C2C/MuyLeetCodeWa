@@ -12,22 +12,14 @@
 //#include "Medium/Problem.h"
 //#include "Hard/Problem.h"
 
-#include "Medium/Problem142.h"
+#include "Hard/Problem76.h"
 
 int main()
 {
 	std::cout << "Hello World!\n";
 
-	std::vector<ListNode*> lists;
-	ListNode* a1 = new ListNode(1);
-	ListNode* a2 = new ListNode(2);
-	ListNode* a3 = new ListNode(3);
-	a1->next = a2;
-	a2->next = a3;
-	a3->next = a1;
-
-	Problem142 p;
-	p.detectCycle(a1);
+	Problem76 p;
+	p.minWindow("ADOBECODEBANC","ABC");
 
 	//std::cout << "End\n";
 	std::cout << "End\n";
