@@ -197,6 +197,7 @@
     <ClInclude Include="Easy\Problem371.h" />
     <ClInclude Include="Easy\Problem387.h" />
     <ClInclude Include="Easy\Problem412.h" />
+    <ClInclude Include="Easy\Problem509.h" />
     <ClInclude Include="Easy\Problem53.h" />
     <ClInclude Include="Easy\Problem58.h" />
     <ClInclude Include="Easy\Problem66.h" />
@@ -223,6 +224,7 @@
     <ClInclude Include="Medium\Problem22.h" />
     <ClInclude Include="Medium\Problem29.h" />
     <ClInclude Include="Medium\Problem3.h" />
+    <ClInclude Include="Medium\Problem322.h" />
     <ClInclude Include="Medium\Problem33.h" />
     <ClInclude Include="Medium\Problem34.h" />
     <ClInclude Include="Medium\Problem36.h" />

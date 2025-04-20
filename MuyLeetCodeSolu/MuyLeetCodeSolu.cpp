@@ -12,14 +12,19 @@
 //#include "Medium/Problem.h"
 //#include "Hard/Problem.h"
 
-#include "Medium/Problem438.h"
+#include "Easy/Problem104.h"
 
 int main()
 {
 	std::cout << "Hello World!\n";
 
-	Problem438 p;
-	p.findAnagrams("cbaebabacd","abc");
+	TreeNode* node1 = new TreeNode(1);
+	node1->left = new TreeNode(2);
+	node1->right = new TreeNode(3);
+	node1->left->right = new TreeNode(4);
+
+	Problem104 p;
+	p.maxDepth(node1);
 
 	//std::cout << "End\n";
 	std::cout << "End\n";

@@ -1,101 +1,79 @@
 #pragma once
 
 /*
-101. Symmetric Tree
-https://leetcode.com/problems/symmetric-tree/
+104. Maximum Depth of Binary Tree
+https://leetcode.com/problems/maximum-depth-of-binary-tree/
+*/
+
+/*
+*
 */
 
 #include <iostream>
-#include <stack>
 
 struct TreeNode
 {
 	int val;
-	TreeNode *left;
-	TreeNode *right;
+	TreeNode* left;
+	TreeNode* right;
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution {
+class Problem104
+{
 public:
-	bool CompareTreeNode(TreeNode* t1, TreeNode* t2)
+	int maxDepth(TreeNode* root)
 	{
-		if (t1 == NULL)
-		{
-			if (t2 == NULL)
-				return true;
-			else
-				return false;
-		}
-		else if (t2 != NULL)
-			return (t1->val == t2->val);
-		else
-			return false;
+		return maxDepthSolu2(root);
 	}
 
-	bool isSymmetric(TreeNode* root)
+private:
+
+	// solution 1
+	int maxDepthSolu1(TreeNode* root)
 	{
-		if (root == NULL)
-			return true;
-		//
-		std::stack<TreeNode*> leftTreeStack;
-		std::stack<TreeNode*> rightTreeStack;
-
-		TreeNode *leftTree = root->left;
-		TreeNode *rightTree = root->right;
-
-		bool finish = false;
-		bool result = true;
-		result = result && CompareTreeNode(leftTree, rightTree);
-		if (!result)
-			return false;
-		while (!finish)
+		if (nullptr == root)
 		{
-			while (leftTree != NULL || !leftTreeStack.empty())
-			{
-				while (leftTree != NULL)
-				{
-
-					// compare value here
-					result = result && CompareTreeNode(leftTree, rightTree);
-					if (!result)
-						return false;
-
-					// get more
-					leftTreeStack.push(leftTree);
-					leftTree = leftTree->left;
-
-					rightTreeStack.push(rightTree);
-					rightTree = rightTree->right;
-				}
-				if (rightTree != NULL)
-					return false;
-
-				// other
-				if (!leftTreeStack.empty() && !rightTreeStack.empty())
-				{
-					// left
-					leftTree = leftTreeStack.top();
-					leftTreeStack.pop();
-					leftTree = leftTree->right;
-					// right
-					rightTree = rightTreeStack.top();
-					rightTreeStack.pop();
-					rightTree = rightTree->left;
-				}
-				else
-				{
-					// maybe some error
-					finish = true;
-					result = false;
-				}
-			}
-			finish = true;
-			if (rightTree != NULL || !rightTreeStack.empty())
-				result = false;
+			return 0;
 		}
 
+		int leftSum = maxDepthSolu1(root->left);
+		int rightSum = maxDepthSolu1(root->right);
+		return 1 + std::max(leftSum, rightSum);
+	}
+
+	// solution 2
+	int maxDepthSolu2(TreeNode* root)
+	{
+		if (nullptr == root)
+		{
+			return 0;
+		}
+
+		int result = 0;
+		int currentDepth = 0;
+
+		TraverseNodes(root, currentDepth, result);
 		return result;
+	}
+
+	void TraverseNodes(TreeNode* node, int& depth, int& result)
+	{
+		if (node == nullptr)
+		{
+			return;
+		}
+		depth = depth + 1;
+		if (nullptr == node->left && nullptr == node->right) // reach leave node
+		{
+			if (depth > result)
+			{
+				result = depth;
+			}
+		}
+		TraverseNodes(node->left, depth, result);
+		TraverseNodes(node->right, depth, result);
+		depth = depth - 1;
 	}
 
 };
