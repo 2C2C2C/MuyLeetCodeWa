@@ -290,5 +290,35 @@
     <ClInclude Include="Medium\Problem322.h">
       <Filter>Medium</Filter>
     </ClInclude>
+    <ClInclude Include="Easy\Problem112.h">
+      <Filter>Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem62.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem63.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem300.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem368.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem334.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem931.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Hard\Problem1289.h">
+      <Filter>Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem139.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Problem91.h">
+      <Filter>Medium</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

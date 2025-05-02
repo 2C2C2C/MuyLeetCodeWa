@@ -12,21 +12,25 @@
 //#include "Medium/Problem.h"
 //#include "Hard/Problem.h"
 
-#include "Easy/Problem104.h"
+#include "Medium/Problem91.h"
 
 int main()
 {
 	std::cout << "Hello World!\n";
+	// [1,5,0,4,1,3]
 
-	TreeNode* node1 = new TreeNode(1);
-	node1->left = new TreeNode(2);
-	node1->right = new TreeNode(3);
-	node1->left->right = new TreeNode(4);
-
-	Problem104 p;
-	p.maxDepth(node1);
+	//std::string source = "applepenapple";
+	//std::vector<std::string> wordDict;
+	//wordDict.push_back("apple");
+	//wordDict.push_back("pen");
 
 	//std::cout << "End\n";
+	//std::string source = "1123";
+	std::string source = "12";
+	Problem91 p;
+	int result = p.numDecodings(source);
+
+	std::cout << result << std::endl;
 	std::cout << "End\n";
 	return 0;
 }
